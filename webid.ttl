@@ -18,7 +18,7 @@
     dbp:orcid "0000-0003-0950-6043";
     foaf:based_near dbpedia:Ghent;
     foaf:account [
-        a knows:GitHubAccount
+        a knows:GitHubAccount;
         foaf:accountName "argahsuknesib";
         foaf:accountServiceHomepage <https://github.com>;
     ];
@@ -27,7 +27,7 @@
     vcard:title "Doctoral Researcher";
     vcard:hasEmail "sendtokush@icloud.com";
     solid:preferredRelativePronoun "his";
-    solid:preferredSubjectPronoun "he";
+    solid:preferredSubjectPronoun "he".
 
 
 
