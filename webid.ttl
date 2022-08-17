@@ -11,6 +11,7 @@
     a foaf:Person, schema:Person;
     foaf:name "Kushagra Singh Bisen"@en;
     foaf:nick "Kush"@en;
+    schema:name "Kushagra Singh Bisen"@en;
     foaf:mbox <mailto:KushagraSingh.Bisen@UGent.be>;
     foaf:homepage <https://argahsuknesib.github.io/>, <https://www.wikidata.org/wiki/Q111547602>;
     foaf:img <https://argahsuknesib.github.io/profile-ugent.jpg>;
