@@ -1,32 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8"/>
     <title>Kush</title>
-    <link rel="stylesheet" href="https://argahsuknesib.github.io/style.css" />
-  </head>
-  <body>
-    <a href="http://argahsuknesib.github.io/news.html">News</a> /
-    <a href="http://argahsuknesib.github.io/about.html">About</a> /
-    <a href="http://argahsuknesib.github.io/cv.html">CV</a> /
-    <a href="http://argahsuknesib.github.io/contact.html">Contact</a>
-    <br />
-    <img style="width: 100px; height: auto" src="profile-ugent.jpg" alt="" />
-    <h2>Kushagra Singh Bisen / Kush</h2>
-    <p>
-      I am a PhD student at Ghent University working in IDLab - imec on the
-      solid project.
-    </p>
-    <p>
-      Connect with me:
-      <a href="https://github.com/argahsuknesib">Github</a> /
-      <a href="https://www.linkedin.com/in/argahsuknesib/">LinkedIn</a> /
-      <a href="https://twitter.com/argahsuknesib">Twitter</a>
-    </p>
+    <link rel="stylesheet" href="https://argahsuknesib.github.io/style.css"/>
+    <script type="text/turtle">
+@prefix :        <https://argahsuknesib.github.io/>.
+@prefix foaf:    <http://xmlns.com/foaf/0.1/>.
+@prefix schema:  <http://schema.org/>.
+@prefix knows:   <https://data.knows.idlab.ugent.be/person/office/#>.
+@prefix dbp:     <http://dbpedia.org/ontology/> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix vcard:   <http://www.w3.org/2006/vcard/ns#>.
+@prefix solid:   <http://www.w3.org/ns/solid/terms#>.
 
-    <h3>Works:</h3>
-    <a href="http://argahsuknesib.github.io/publications">Publications</a>
-    <br />
-    <a href="http://argahsuknesib.github.io/slides">Slides</a>
-  </body>
+:me
+    a                                 foaf:Person, schema:Person ;
+    foaf:name                         "Kushagra Singh Bisen"@en ;
+    schema:name                       "Kushagra Singh Bisen"@en ;
+    foaf:familyName                   "Bisen"@en ;
+    foaf:nick                         "Kush"@en ;
+    foaf:mbox                         <mailto:KushagraSingh.Bisen@UGent.be> ;
+    foaf:homepage                     <https://argahsuknesib.github.io/>, <https://www.wikidata.org/wiki/Q111547602> ;
+    foaf:img                          <https://argahsuknesib.github.io/profile-ugent.jpg> ;
+    foaf:gender                       "male"@en ;
+    dbp:orcid                         "0000-0003-0950-6043" ;
+    foaf:based_near                   dbpedia:Ghent ;
+    foaf:account                      [ a                           knows:GitHubAccount ;
+                                        foaf:accountName            "argahsuknesib" ;
+                                        foaf:accountServiceHomepage <https://github.com> ; ] ;
+    foaf:knows                        <https://data.knows.idlab.ugent.be/person/pbonte/#me>,
+                                      <https://data.knows.idlab.ugent.be/person/femkeongenae/#me>,
+                                      <https://pietercolpaert.be/#me>, <https://josd.github.io/card.ttl#me>,
+                                      <https://pieterheyvaert.com/#me>,
+                                      <https://data.knows.idlab.ugent.be/person/jsteinbach/#me> ;
+    vcard:title                       "Doctoral Researcher" ;
+    vcard:hasEmail                    "sendtokush@icloud.com" ;
+    solid:preferredRelativePronoun    "his" ;
+    solid:preferredSubjectPronoun     "he" ;
+    solid:oidcIssuerRegistrationToken "34f363c3-c8ae-480c-8e20-d8cc06952644" .
+    </script>
+</head>
+<body>
+<br/>
+<img style="width: 100px; height: auto" src="profile-ugent.jpg" alt=""/>
+<h2>Kushagra Singh Bisen / Kush</h2>
+<p>
+    PhD researcher in Decentralized Web.
+</p>
+<p>
+<h3>Check out.</h3>
+<li><a href="https://scholar.google.com/citations?user=mkDp63AAAAAJ&hl=en&oi=ao">Publications</a></li>
+</body>
 </html>
