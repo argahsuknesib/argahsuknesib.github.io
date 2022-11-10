@@ -6,6 +6,7 @@
 @prefix dbpedia: <http://dbpedia.org/resource/> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#>.
 @prefix solid: <http://www.w3.org/ns/solid/terms#>.
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
 
 :me 
     a foaf:Person, schema:Person;
@@ -25,6 +26,7 @@
     ];
     foaf:knows <https://data.knows.idlab.ugent.be/person/pbonte/#me>, <https://data.knows.idlab.ugent.be/person/femkeongenae/#me>, <https://pietercolpaert.be/#me>, <https://josd.github.io/card.ttl#me>,
                 <https://pieterheyvaert.com/#me>, <https://data.knows.idlab.ugent.be/person/jsteinbach/#me>;
+    wdt:P4033 "@argahsuknesib@qoto.org";
     vcard:title "Doctoral Researcher";
     vcard:hasEmail "sendtokush@icloud.com";
     solid:preferredRelativePronoun "his";
