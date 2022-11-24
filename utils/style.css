@@ -1,17 +1,25 @@
 body {
-    max-width: 640px;
-    margin: auto;
-    padding: 10px;
-    border-top: 5px solid lightsteelblue;
-    font-size: 13px;
-    font-family: "Cascadia Code", serif;
-    font-weight: 380;
+  max-width: 640px;
+  margin: auto;
+  padding: 10px;
+  border-top: 5px solid lightsteelblue;
+  font-size: 13px;
+  font-family: "Cascadia Code", serif;
+  font-weight: 380;
 }
 
 .info {
-    color: slategray;
+  color: slategray;
+}
+
+.footer {
+  font-family: "Cascadia Code", serif;
+  font-size: 12px;
+  margin-bottom: auto;
+  position: absolute;
+  bottom: 0;
 }
 
 img.inline {
-    max-width: 1em;
+  max-width: 1em;
 }
