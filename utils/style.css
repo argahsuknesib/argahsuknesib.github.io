@@ -1,25 +1,24 @@
 body {
+  font-family: monospace;
   max-width: 640px;
   margin: auto;
   padding: 10px;
   border-top: 5px solid lightsteelblue;
-  font-size: 11px;
-  font-family: monospace;
-  font-weight: 380;
 }
 
 .info {
   color: slategray;
-}
-
-.footer {
-  font-family: "Cascadia Code", serif;
-  font-size: 12px;
-  margin-bottom: auto;
-  position: absolute;
-  bottom: 0;
+  font-style: italic;
 }
 
 img.inline {
   max-width: 1em;
+}
+
+.footer {
+  font-family: "Cascadia Code", serif;
+  font-size: 11px;
+  margin-bottom: auto;
+  position: absolute;
+  bottom: 0;
 }
