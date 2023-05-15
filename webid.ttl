@@ -26,8 +26,7 @@
     ];
     foaf:knows <https://data.knows.idlab.ugent.be/person/pbonte/#me>, <https://data.knows.idlab.ugent.be/person/femkeongenae/#me>, <https://pietercolpaert.be/#me>, <https://josd.github.io/card.ttl#me>,
                 <https://pieterheyvaert.com/#me>, <https://data.knows.idlab.ugent.be/person/jsteinbach/#me>;
-    wdt:P4033 "argahsuknesib@qoto.org";
-    vcard:title "Doctoral Researcher";
+    vcard:title "Predoctoral Researcher";
     vcard:hasEmail "sendtokush@icloud.com";
     solid:preferredRelativePronoun "his";
     solid:preferredSubjectPronoun "he".
