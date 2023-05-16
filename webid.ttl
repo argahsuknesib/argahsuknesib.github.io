@@ -15,7 +15,7 @@
     schema:name "Kushagra Singh Bisen"@en;
     foaf:mbox <mailto:KushagraSingh.Bisen@UGent.be>;
     foaf:homepage <https://argahsuknesib.github.io/>, <https://www.wikidata.org/wiki/Q111547602>;
-    foaf:img <https://argahsuknesib.github.io/profile-ugent.jpg>;
+    foaf:img <https://argahsuknesib.github.io/profile.jpg>;
     foaf:gender "male"@en;
     dbp:orcid "0000-0003-0950-6043";
     foaf:based_near dbpedia:Ghent;
