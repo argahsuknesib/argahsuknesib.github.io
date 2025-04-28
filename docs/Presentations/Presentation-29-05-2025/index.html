@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Shower Presentation Engine</title>
+    <title>Presentation 29-04-2025</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -43,185 +43,237 @@
           color: var(--color-grey);
         }
 
-        #cover h2{
+        #cover h2 {
           font-size: 50px;
         }
-
-        
       </style>
+    </section>
+
+    <section class="slide">
+      <h2>RDF Stream Processing</h2>
+      <figure>
+        <img
+          src="pictures/rdf-stream.png"
+          alt="RDF Stream"
+          class="cover"
+        />
+      </figure>
+    </section>
+
+    <section class="slide">
+      <h2>Windows in RDF Stream Processing</h2>
+      <figure>
+        <img src="pictures/RDF Stream Processing - with Windows.png" alt="Processing with Windows" style="width: fit-content; height:400px"/>
+      </figure>
+    </section>
+    <section class="slide">
+      <h2>RSP-Query Language (RSPQL)</h2>
+      <p></p>
+      <ul>
+        <li>RSP-QL is an extension of SPARQL</li>
+        <li>
+          It allows for the specification of time windows and stream processing
+          semantics.
+        </li>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Querying Average Temperature</h2>
+      <pre>
+          <code>PREFIX : &lt;http://rsp.js/&gt;</code>
+          <code>REGISTER RStream <output> AS</code>
+          <code>SELECT (AVG(?temperature) AS ?temp)</code>
+          <code>FROM NAMED WINDOW ex:w1 ON STREAM ex:stream [RANGE 30min STEP 15min]</code>
+          <code>WHERE { </code>
+          <code>  WINDOW ex:w1 {  </code>
+          <code>    ?sensor :hasTemperature ?temperature .</code>
+          <code>  } </code>
+          <code>}</code>
+      </pre>
+      <style>
+        pre {
+          font-size: 20px;
+        }
+
+        code {
+          font-size: 20px;
+        }
+
+        code.mark {
+          background-color: var(--color-grey);
+          color: var(--color-white);
+        }
+      </style>
+    </section>
+
+    <section class="slide">
+      <h2>Reusing Stream Queries</h2>
+      <p>
+        In distributed and decentralized systems,
+        <br>
+        Different RSP Agents may have different queries running over the same or different streams.
+      </p>
+      <p>
+        The results of these queries can be reused to optimize the execution of other queries.
+      </p>
+    </section>
+
+    <section class="slide">
+      <h2>Use Case</h2>
+      <figure>
+        <img src="./pictures/Stream Result Merge - Use Case.png" alt="Use Case" style="width: fit-content; height:380px"/>
+      </figure>
+    </section>
+
+    <section class="slide">
+      <h2>Finding Similarities in Queries</h2>
+      <p>Query containment <br> Results of one query are always a subset of the results for another query</p>
+      <p>Query Isomorphism <br> Queries are structurally identical, and will produce the same results.</p>
+    </section>
+
+    <section class="slide">
+      <h2>Finding Similarities in Queries</h2>
+      <p>
+        Given a set of RSP Agents and their queries, if a parent query is introduced to the system.
+      </p>
+      <p>
+        Query Containment relationships between the parent query and the child queries are used to 
+        determine the reusability of the child query results.
+      </p>
     </section>
 
 
     <section class="slide">
-      
+      <h2>Joining Query Results</h2>
+      <figure>
+        <img src="./pictures/Joining Streams - Same Window Semantics.png" alt="Joining Query Results - Same Window Semantics" style="width: fit-content; height:380px"/>
+      </figure>
     </section>
 
-    <!-- <section class="slide">
-      <h2>Shower key features</h2>
-      <ol>
-        <li>Built on HTML, CSS and JavaScript</li>
-        <li>Works in all modern browsers</li>
-        <li>Themes are separated from engine</li>
-        <li>Fully keyboard accessible</li>
-        <li>Printable to PDF</li>
-      </ol>
-      <p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
-    </section> -->
-
-    <!-- <section class="slide">
-      <h2>Plain text on your slides</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur
-        <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua. Ut enim ad minim veniam,
-        <em>quis nostrud</em> exercitation ullamco laboris
-        <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute
-        irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum
-        <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat
-        cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia
-        deserunt mollit anim id est laborum.
-      </p>
-    </section> -->
-
-    <!-- <section class="slide"> -->
-      <!-- <h2>Two columns if you like</h2>
-      <div class="columns two">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation.
-        </p>
-        <p>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia.
-        </p>
-      </div>
-    </section> -->
-
-    <!-- <section class="slide">
-      <h2>All kind of lists</h2>
-      <ol>
-        <li>Simple lists are marked with bullets</li>
-        <li>Ordered lists begin with a number</li>
-        <li>
-          You can even nest lists one inside another
-          <ul>
-            <li>Or mix their types</li>
-            <li>But do not go too far</li>
-            <li>Otherwise audience will be bored</li>
-          </ul>
-        </li>
-        <li>Look, seven rows exactly!</li>
-      </ol>
-    </section> -->
-
-    <!-- <section class="slide">
-      <h2>Serious citations</h2>
+    <section class="slide">
+      <h3>Combining Results from different Window Semantics </h3>
       <figure>
-        <blockquote>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia.
-          </p>
-        </blockquote>
-        <figcaption>Marcus Tullius Cicero</figcaption>
+        <img src="./pictures/Joining Stream - Different Window Semantics.png" alt="Joining Query Results - Different Window Semantics" style="width: fit-content; height:350px"/>
       </figure>
-    </section> -->
+    </section>
 
-    <!-- <section class="slide">
-      <h2>Code samples</h2>
-      <pre>
-            <code>&lt;!DOCTYPE html&gt;</code>
-            <code class="mark">&lt;html lang="en"&gt;</code>
-            <code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-            <code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-            <code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-            <code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-            <code><mark>&lt;/head&gt;</mark></code>
-        </pre>
-    </section> -->
-
-    <!-- <section class="slide">
-      <h2>Even tables</h2>
-      <table>
-        <tr>
-          <th scope="col">Locavore</th>
-          <th>Umami</th>
-          <th>Helvetica</th>
-          <th>Vegan</th>
-        </tr>
-        <tr>
-          <th scope="row">Fingerstache</th>
-          <td>Kale</td>
-          <td>Chips</td>
-          <td>Keytar</td>
-        </tr>
-        <tr>
-          <th scope="row">Sriracha</th>
-          <td>Gluten-free</td>
-          <td>Ennui</td>
-          <td>Keffiyeh</td>
-        </tr>
-        <tr>
-          <th scope="row">Thundercats</th>
-          <td>Jean</td>
-          <td>Shorts</td>
-          <td>Biodiesel</td>
-        </tr>
-        <tr>
-          <th scope="row">Terry</th>
-          <td>Richardson</td>
-          <td>Swag</td>
-          <td>Blog</td>
-        </tr>
-      </table>
-      <p>It’s good to have information organized.</p>
-    </section> -->
-
-    <!-- <section class="slide" id="picture">
-      <h2>Pictures</h2>
+    <section class="slide">
+      <h3>Combining Results from different Window Semantics </h3>
       <figure>
-        <img
-          class="cover"
-          src="pictures/picture.jpg"
-          alt="Orange typewriter on a wooden table close-up"
-        />
-        <figcaption class="copyright right white">
-          <a href="https://fiftyfootshadows.net">© John Carey</a>
-        </figcaption>
+        <img src="./pictures/Different Window Semantics - Merge.png" alt="Merge Results from different Window Semantics" style="width: fit-content; height:360px"/>
+      </figure>
+    </section>
+
+  <section class="slide">
+    <h3>
+      Approximating the Results
+    </h3>
+    <p>
+      <ul>
+        <li>Parent Query Results can be approximated using the child queries.</li>
+        <li>Aggregation Functions are a loss function</li>
+        <li>Approximation can be far away from the ground truth</li>
+        <li>Not dependable for critical use cases</li>
+      </ul>
+    </p>
+    <p class="note">So to get dependable correct results. We should just query the original data source?</p>
+  </section>
+
+    <section class="slide">
+      <h3>Chunking Strategies as a Solution</h3> 
+ <figure>
+        <img src="./pictures/Chunking Strategies - Joining Windows - Need Register New Query.png" alt="Chunking Strategies" style="width: fit-content; height: 350px;">
       </figure>
       <style>
-        #picture h2 {
-          color: white;
-        }
       </style>
-    </section> -->
+    </section>
 
-    <!-- <section class="slide">
-      <h2 class="shout shrink">You can even shout this way</h2>
-    </section> -->
+    <section class="slide">
+      <h3>Chunking Strategies as a Solution</h3>
+      <figure>
+        <img src="./pictures/Chunking Strategy - No Need for New Query.png" alt="Chunking Strategies" style="width: 900px; height: 350px;">
+    </section>
 
-    <!-- <section class="slide">
-      <h2>Inner navigation</h2>
-      <ol>
-        <li>Lets you reveal list items one by one</li>
-        <li class="next">To keep some key points</li>
-        <li class="next">In secret from audience</li>
-        <li class="next">But it will work only once</li>
-        <li class="next">Nobody wants to see the same joke twice</li>
-      </ol>
-    </section> -->
 
-    <!-- <section class="slide" id="see-more">
+    <section class="slide">
+      <h3>What about Aggregation Functions?</h3>
+      <p>     New Query can be registered into the RSP Agent with the chunked window semantics. 
+      </p>
+     <p>
+      The query registered can have the same aggregation function as the parent query.
+     </p>
+    </section>
+
+    <section class="slide">
+      <h3>What about Aggregation Functions?</h3>
+      <table>
+        <tr>
+          <th scope="col">SPARQL 1.1 Functions</th>
+          <th>Derivable Aggregation</th>
+        </tr>
+        <tr>
+          <td>COUNT, SUM</td>
+          <td>AVG</td>
+        </tr>
+        <tr>
+          <td>AVG, COUNT</td>
+          <td>SUM</td>
+        </tr>
+        <tr>
+          <td>MIN, MAX</td>
+          <td>RANGE (compute seperately, not SPARQL 1.1)</td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="slide">
+      <h3>Including Extension Functions?</h3>
+      <table>
+        <tr>
+          <th scope="col">SPARQL Functions</th>
+          <th>Derivable Aggregation</th>
+        </tr>
+        <tr>
+          <td>COUNT, SUM</td>
+          <td>AVG</td>
+        </tr>
+        <tr>
+          <td>AVG, COUNT</td>
+          <td>SUM</td>
+        </tr>
+        <tr>
+          <td>MIN, MAX</td>
+          <td>RANGE (compute seperately)</td>
+        </tr>
+        <tr>
+          <td>SUM, COUNT, SUM OF SQUARES</td>
+          <td>VAR, STDEV</td>
+        </tr>
+        <tr>
+          <td>COUNT(DISTINCT), COUNT(*)</td>
+          <td>COUNT_DUPLICATES</td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="slide">
+      <h2>Streaming Query Hive</h2>
+
+<p>Streaming Query Hive is a Microservice which combines Multiple Streaming Queries to solve for a single parent query.
+  <br>
+  It is currently in development.
+</p>
+<figure>
+  <img src="./pictures/qr-code.png" alt="Streaming Query Hive" style="width: fit-content; height: 200px;">
+</figure>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout shrink">Questions?</h2>
+    </section>
+      <section class="slide" id="see-more">
       <h2 class="shout">
-        <img src="pictures/logo.svg" alt="Shower logo" />
-        <a href="https://github.com/shower/shower">See more on GitHub</a>
+        <a href="https://github.com/SolidLabResearch/streaming-query-hive/">Link to Repository</a>
       </h2>
       <style>
         #see-more h2 {
@@ -234,7 +286,7 @@
         }
       </style>
     </section>
-    r> -->
+
     <div class="progress"></div>
 
     <script src="shower//shower.js"></script>
