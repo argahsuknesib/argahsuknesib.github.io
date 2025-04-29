@@ -80,7 +80,7 @@
     <section class="slide">
       <h2>Querying Average Temperature</h2>
       <pre>
-          <code>PREFIX : &lt;http://rsp.js/&gt;</code>
+          <code>PREFIX ex: &lt;http://rsp.js/&gt;</code>
           <code>REGISTER RStream <output> AS</code>
           <code>SELECT (AVG(?temperature) AS ?temp)</code>
           <code>FROM NAMED WINDOW ex:w1 ON STREAM ex:stream [RANGE 30min STEP 15min]</code>
